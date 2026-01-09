@@ -16,7 +16,7 @@ export default function SearchBar() {
   }
   return (
     <div className='mt-10'>
-        <input type="text" placeholder="Enter A country or Town" value={query} onChange={(e) =>setQuery(e.target.value) } className='border-2 border-gray-450 rounded-xl p-2 w-2xl'/>
+        <input type="text" placeholder="Enter A country or Town" value={query} onChange={(e) =>setQuery(e.target.value) } className='border-2 border-gray-450 rounded-xl p-2 pt-3 w-1xl md:w-2xl'/>
         <button onClick={handleSubmit} className='-ml-9 p-2 bg-blue-500 rounded-xl text-white hover:bg-blue-600'><Search size={16}/></button>
     </div>
   )

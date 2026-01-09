@@ -1,5 +1,4 @@
-"use client";
-
+'use client'
 import SearchBar from "@/app/components/SearchBar";
 import { useState, useEffect } from "react";
 
@@ -18,7 +17,6 @@ const images = [
 
 export default function Home() {
   const [bg, setBg] = useState(images[0]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setBg(images[Math.floor(Math.random() * images.length)]);
@@ -26,30 +24,23 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
-
   return (
-    <section
-      className="relative min-h-screen w-full flex items-center justify-center bg-cover bg-center"
+    <>
+      <section
+      className="relative min-h-screen w-full flex items-center justify-center bg-no-repeat bg-center bg-cover"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      
-      <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/60 to-black/80" />
-
-      <div className="relative z-10 w-full max-w-2xl px-4 sm:px-6 text-center text-white">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-4">
-          Plan Smarter. <br className="sm:hidden" />
-          Travel Better.
-        </h1>
-
-        <p className="text-sm sm:text-base md:text-xl opacity-90 mb-6">
-          Everything you need for your next adventure — in one place.
-        </p>
-
-        
-        <div className="w-full max-w-md mx-auto">
-          <SearchBar />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Plan Smarter. Travel Better.
+          </h1>
+          <p className="text-lg md:text-xl">
+            Everything you need for your next adventure — in one place.
+          </p>
+          <SearchBar/>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
