@@ -17,7 +17,6 @@
 ## Tech Stacks
 
 - Next js
-- React Router
 - REST Countries API
 - GeoDB Cities API
 ---
@@ -47,5 +46,5 @@ git clone https://github.com/Robert-kelly19/TourGuide.git
  npm install
 
 3. Start The App
- npm start
+ npm run dev
 
